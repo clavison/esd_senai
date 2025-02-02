@@ -4,12 +4,12 @@ public class Pilha {
 	
 	private Elemento topo;
 	
-	public boolean empty() {
+	public boolean isEmpty() {
 		return topo == null;
 	}
 	
 	public void push(Elemento e) {
-		if(empty()) {
+		if(isEmpty()) {
 			topo = e;
 		}else {
 			e.setAnterior(topo);
@@ -18,7 +18,7 @@ public class Pilha {
 	}
 	
 	public void pop() {
-		if(!empty()) {
+		if(!isEmpty()) {
 			topo = topo.getAnterior();
 		}
 	}
@@ -28,7 +28,7 @@ public class Pilha {
 	}
 	
 	public String view() {
-		if (empty()) {
+		if (isEmpty()) {
 			return "Pilha vazia";
 		} else {
 			String retorno = "";
